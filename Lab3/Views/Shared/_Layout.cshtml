@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+    <header>
+    <h4>Kelsey Phillips</h4>
+    <h5>Welcome to my page.</h5>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" type="text/css" />
+    @Html.ActionLink("Home", "Index", "Home")
+    @Html.ActionLink("Show the song!", "SongForm", "Home")
+    @Html.ActionLink("Students", "CreateStudent", "Home")
+    </header>
+
+    <body>
+        @RenderBody()
+    </body>
+
+
+    <footer>
+        Description of what layout does:
+
+        <p>Why were the layout and CSS files put in those directories:
+        CSS put into wwwroot because in ASP.NET Core only files located there can be sent over HTTP requests, 
+        otherwise the files are blocked and cannot be sent.
+        Layout was put into the Shared folder because it is typically shared between the other views in order 
+        to create a consistent look and feel between different views used for content bodies. 
+        It needs to be made accessible for other files under the View folder.
+    </p>
+    </footer>
+</html>

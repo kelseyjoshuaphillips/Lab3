@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Html;
+@{
+    Layout = "_Layout";
+}
+<form asp-controller="Home" asp-action="Sing" method="post">
+    <table>
+        <tr>
+            <td>Enter Number of Bottles:</td>
+            <td>
+                <input type="number" min="50" max="100" name="Bottles"/>
+            </td>
+            <td>
+                <button type="submit" value="Submit">Sing!</button>
+            </td>
+            
+        </tr>
+
+
+    </table>
+</form>
+

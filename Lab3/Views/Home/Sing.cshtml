@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "_Layout";
+}
+<html>
+
+
+<body>
+    @Html.ActionLink("Play Again", "SongForm", "Home")
+
+    @for (int i = int.Parse(ViewBag.Bottles); i > 0; i--)
+    {
+        @if (i != 1)
+        {
+            <p>
+                @i green bottle hanging on the wall,<br />
+                @i green bottle hanging on the wall,<br />
+                And if one green bottle should accidentally fall,<br />
+                There'll be @(@i - 1) green bottle hanging on the wall.<br />
+            </p>
+        }
+        else
+        {
+            <p>
+                @i green bottles hanging on the wall,<br />
+                @i green bottles hanging on the wall,<br />
+                And if one green bottle should accidentally fall,<br />
+                There'll be no green bottles hanging on the wall.<br /><br />
+                There is no green bottle standing on the wall.<br />
+            </p>
+        }
+
+
+    }
+
+
+</body>
+
+
+</html>
